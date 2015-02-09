@@ -12,9 +12,7 @@
 
 @interface RWTableViewController ()
 
-/** @brief An array of NSString objects, data source of the table view. */
 @property (strong, nonatomic) NSMutableArray *_objects;
-
 
 @end
 
@@ -32,19 +30,22 @@
       
       _objects = [NSMutableArray arrayWithObjects:@"One",@"Two",@"Three",nil];
 
-//    _objects = [@[@"Get Milk!", @"Go to gym", @"Breakfast with Rita!", @"Call Bob", @"Pick up newspaper", @"Send an email to Joe", @"Pick up flowers"] mutableCopy];
   }
   return _objects;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 #pragma mark - View life cycle
 
 - (void)viewDidLoad {
 
-    
-    _objects = [NSMutableArray arrayWithObjects:@"One",@"Two",@"Three", @"Four", nil];
+    _objects = [NSMutableArray arrayWithObjects:@"Call mom and ask about the family reunion",@"Check out the report and finalize it, please", nil];
     [self.tableView registerClass: [RWBasicTableViewCell class] forCellReuseIdentifier:@"Cell Identifier"];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
 
   UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognized:)];
@@ -58,6 +59,50 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_objects count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 3;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(19, view.frame.origin.y, view.frame.size.width-19, view.frame.size.height)];
+    label.textColor = [[UIColor alloc] initWithRed:76/255.0f green:76/255.0f blue:76/255.0f alpha:1.0f];
+    [label setFont:[UIFont fontWithName:@"BrandonText-Regular" size:12]];
+    
+    NSString *string = [self.tableView.dataSource tableView:tableView titleForHeaderInSection:section];
+    [label setText:string];
+    
+    [view addSubview:label];
+    return view;
+
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = NSLocalizedString(@"Morning", @"Morning");
+            break;
+        case 1:
+            sectionName = NSLocalizedString(@"Afternoon", @"Afternoon");
+            break;
+        
+        case 2:
+            sectionName = NSLocalizedString(@"Evening", @"Evening");
+            break;
+            
+        default:
+            sectionName = @"Anytime";
+            break;
+    }
+    return sectionName;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,7 +121,6 @@
   NSString *object = [_objects objectAtIndex:indexPath.row];
     NSLog(@"selected tableview row is %ld",(long)indexPath.row);
     NSLog(object);
-    cell.taskName.backgroundColor = [UIColor greenColor];
     cell.taskName.text = object;
   
   return cell;
@@ -126,7 +170,7 @@
 }
 
 - (IBAction)longPressGestureRecognized:(id)sender {
-  
+    
   UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
   UIGestureRecognizerState state = longPress.state;
   

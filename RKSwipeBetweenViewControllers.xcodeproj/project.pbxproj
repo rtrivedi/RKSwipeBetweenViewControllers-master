@@ -25,6 +25,10 @@
 		FBC1C9301A86EF4600D7CE29 /* RWBasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1C92C1A86EF4600D7CE29 /* RWBasicTableViewCell.m */; };
 		FBC1C9311A86EF4600D7CE29 /* UIAlertView+RWBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1C92E1A86EF4600D7CE29 /* UIAlertView+RWBlock.m */; };
 		FBC1C9331A86EF5400D7CE29 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C9321A86EF5400D7CE29 /* Storyboard.storyboard */; };
+		FBC1C9361A88278A00D7CE29 /* BrandonText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C9341A88270400D7CE29 /* BrandonText-Regular.otf */; };
+		FBC1C9371A88278A00D7CE29 /* BrandonText-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C9351A88270D00D7CE29 /* BrandonText-ThinItalic.otf */; };
+		FBC1C9391A883A6600D7CE29 /* russell.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C9381A883A6600D7CE29 /* russell.png */; };
+		FBC1C93B1A883A8000D7CE29 /* ronakprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C93A1A883A8000D7CE29 /* ronakprofile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		FBC1C92D1A86EF4600D7CE29 /* UIAlertView+RWBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+RWBlock.h"; sourceTree = "<group>"; };
 		FBC1C92E1A86EF4600D7CE29 /* UIAlertView+RWBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+RWBlock.m"; sourceTree = "<group>"; };
 		FBC1C9321A86EF5400D7CE29 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		FBC1C9341A88270400D7CE29 /* BrandonText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrandonText-Regular.otf"; sourceTree = "<group>"; };
+		FBC1C9351A88270D00D7CE29 /* BrandonText-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrandonText-ThinItalic.otf"; sourceTree = "<group>"; };
+		FBC1C9381A883A6600D7CE29 /* russell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = russell.png; sourceTree = "<group>"; };
+		FBC1C93A1A883A8000D7CE29 /* ronakprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronakprofile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,8 @@
 				992F23B01985BD6300320CAA /* RKSwipeBetweenViewControllersTests */,
 				992F238A1985BD6300320CAA /* Frameworks */,
 				992F23891985BD6300320CAA /* Products */,
+				FBC1C9381A883A6600D7CE29 /* russell.png */,
+				FBC1C93A1A883A8000D7CE29 /* ronakprofile.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +146,8 @@
 				FBC1C92C1A86EF4600D7CE29 /* RWBasicTableViewCell.m */,
 				FBC1C92D1A86EF4600D7CE29 /* UIAlertView+RWBlock.h */,
 				FBC1C92E1A86EF4600D7CE29 /* UIAlertView+RWBlock.m */,
+				FBC1C9341A88270400D7CE29 /* BrandonText-Regular.otf */,
+				FBC1C9351A88270D00D7CE29 /* BrandonText-ThinItalic.otf */,
 				992F23921985BD6300320CAA /* Supporting Files */,
 			);
 			path = RKSwipeBetweenViewControllers;
@@ -249,10 +261,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC1C9361A88278A00D7CE29 /* BrandonText-Regular.otf in Resources */,
+				FBC1C9371A88278A00D7CE29 /* BrandonText-ThinItalic.otf in Resources */,
 				992F23A41985BD6300320CAA /* Images.xcassets in Resources */,
 				FBC1C9331A86EF5400D7CE29 /* Storyboard.storyboard in Resources */,
 				992F23961985BD6300320CAA /* InfoPlist.strings in Resources */,
+				FBC1C9391A883A6600D7CE29 /* russell.png in Resources */,
 				992F239F1985BD6300320CAA /* Main.storyboard in Resources */,
+				FBC1C93B1A883A8000D7CE29 /* ronakprofile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

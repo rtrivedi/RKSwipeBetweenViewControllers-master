@@ -10,6 +10,9 @@
 
 @interface RWBasicTableViewCell : UITableViewCell
 
+@property (retain, nonatomic) UIImageView *senderThumbnail;
 @property (retain, nonatomic) UILabel *taskName;
+@property (retain, nonatomic) UILabel *reminderTime;
+
 
 @end

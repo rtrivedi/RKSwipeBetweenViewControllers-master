@@ -1,11 +1,4 @@
-//
-//  RKSwipeBetweenViewControllers.m
-//  RKSwipeBetweenViewControllers
-//
-//  Created by Richard Kim on 7/24/14.
-//  Copyright (c) 2014 Richard Kim. All rights reserved.
-//
-//  @cwRichardKim for regular updates
+
 
 #import "RKSwipeBetweenViewControllers.h"
 
@@ -22,6 +15,7 @@
 #define X_OFFSET 8 //%%% for some reason there's a little bit of a glitchy offset.  I'm going to look for a better workaround in the future
 
 @interface RKSwipeBetweenViewControllers () {
+    
     UIScrollView *pageScrollView;
     NSInteger currentPageIndex;
 }
@@ -44,7 +38,6 @@
 
     UIColor *blueBackground =  [[UIColor alloc] initWithRed:30/255.0f green:170/255.0f blue:241/255.0f alpha:1.0f];
     
-    self.title = @"Daily";
     self.navigationBar.backgroundColor = blueBackground;
     self.navigationBar.barTintColor = blueBackground; //%%% bartint
     self.navigationBar.translucent = NO;
@@ -70,7 +63,7 @@
     NSInteger numControllers = [viewControllerArray count];
     
     if (!buttonText) {
-         buttonText = [[NSArray alloc]initWithObjects: @"Today",@"Tomorrow",@"Later",nil]; //%%%buttontitle
+         buttonText = [[NSArray alloc]initWithObjects: @"Today",@"Tomorrow",@"Later",nil];
     }
     
     for (int i = 0; i<numControllers; i++) {
@@ -84,8 +77,9 @@
         [button addTarget:self action:@selector(tapSegmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         
         [button setTitle:[buttonText objectAtIndex:i] forState:UIControlStateNormal]; //%%%buttontitle
+        button.titleLabel.font = [UIFont fontWithName:@"BrandonText-Regular" size:18];
+        
     }
-    
     pageController.navigationController.navigationBar.topItem.titleView = navigationView;
     
     //%%% example custom buttons example:
@@ -142,6 +136,16 @@
 {
     [self setupPageViewController];
     [self setupSegmentButtons];
+    
+//    for (NSString* family in [UIFont familyNames])
+//    {
+//        NSLog(@"%@", family);
+//        
+//        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+//        {
+//            NSLog(@"  %@", name);
+//        }
+//    }
 }
 
 //%%% generic setup stuff for a pageview controller.  Sets up the scrolling style and delegate for the controller
