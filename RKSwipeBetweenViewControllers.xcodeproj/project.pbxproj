@@ -29,6 +29,7 @@
 		FBC1C9371A88278A00D7CE29 /* BrandonText-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C9351A88270D00D7CE29 /* BrandonText-ThinItalic.otf */; };
 		FBC1C9391A883A6600D7CE29 /* russell.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C9381A883A6600D7CE29 /* russell.png */; };
 		FBC1C93B1A883A8000D7CE29 /* ronakprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C93A1A883A8000D7CE29 /* ronakprofile.png */; };
+		FBC1C93D1A88949000D7CE29 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC1C93C1A88949000D7CE29 /* checkmark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		FBC1C9351A88270D00D7CE29 /* BrandonText-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrandonText-ThinItalic.otf"; sourceTree = "<group>"; };
 		FBC1C9381A883A6600D7CE29 /* russell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = russell.png; sourceTree = "<group>"; };
 		FBC1C93A1A883A8000D7CE29 /* ronakprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronakprofile.png; sourceTree = "<group>"; };
+		FBC1C93C1A88949000D7CE29 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				992F23891985BD6300320CAA /* Products */,
 				FBC1C9381A883A6600D7CE29 /* russell.png */,
 				FBC1C93A1A883A8000D7CE29 /* ronakprofile.png */,
+				FBC1C93C1A88949000D7CE29 /* checkmark.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +272,7 @@
 				FBC1C9391A883A6600D7CE29 /* russell.png in Resources */,
 				992F239F1985BD6300320CAA /* Main.storyboard in Resources */,
 				FBC1C93B1A883A8000D7CE29 /* ronakprofile.png in Resources */,
+				FBC1C93D1A88949000D7CE29 /* checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

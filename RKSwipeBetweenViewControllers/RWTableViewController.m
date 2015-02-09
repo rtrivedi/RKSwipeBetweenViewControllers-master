@@ -43,7 +43,7 @@
 
 - (void)viewDidLoad {
 
-    _objects = [NSMutableArray arrayWithObjects:@"Call mom and ask about the family reunion",@"Check out the report and finalize it, please", nil];
+    _objects = [NSMutableArray arrayWithObjects:@"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc",@"Check out the report and finalize it, please", nil];
     [self.tableView registerClass: [RWBasicTableViewCell class] forCellReuseIdentifier:@"Cell Identifier"];
     //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
@@ -122,6 +122,7 @@
     NSLog(@"selected tableview row is %ld",(long)indexPath.row);
     NSLog(object);
     cell.taskName.text = object;
+    [cell.taskName sizeToFit];
   
   return cell;
 }

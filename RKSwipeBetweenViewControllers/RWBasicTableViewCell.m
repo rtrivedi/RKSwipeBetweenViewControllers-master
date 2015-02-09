@@ -34,25 +34,36 @@
         _senderThumbnail.image = [UIImage imageNamed: @"ronakprofile.png"];
         _senderThumbnail.center = CGPointMake(firstThird.center.x, firstThird.center.y + 10 );
         
-        _taskName = [[UILabel alloc] initWithFrame:CGRectMake(Middle.frame.origin.x,_senderThumbnail.frame.origin.y-15, Middle.frame.size.width, 60)];
+        _taskName = [[UILabel alloc] initWithFrame:CGRectMake(Middle.frame.origin.x,_senderThumbnail.frame.origin.y, Middle.frame.size.width, 60)];
         _taskName.textColor = [[UIColor alloc] initWithRed:136/255.0f green:136/255.0f blue:136/255.0f alpha:1.0f];
-        [_taskName setNumberOfLines:3];
+        [_taskName setNumberOfLines:4];
         _taskName.font = labelFont;
         
-        _reminderTime = [[UILabel alloc] initWithFrame:CGRectMake(Middle.frame.origin.x,_taskName.frame.origin.y + _taskName.frame.size.height - 10, Middle.frame.size.width, 20)];
+        _reminderTime = [[UILabel alloc] initWithFrame:CGRectMake(Middle.frame.origin.x,_taskName.frame.origin.y + _taskName.frame.size.height, Middle.frame.size.width, 20)];
         _reminderTime.textColor = [[UIColor alloc] initWithRed:136/255.0f green:136/255.0f blue:136/255.0f alpha:1.0f];
         _reminderTime.font = reminderFont;
         _reminderTime.text = @"Reminder at 11:30am";
+        
+        UIImage *img = [self imageWithImage:[UIImage imageNamed:@"checkmark.png"] scaledToSize:CGSizeMake(30, 30)];
+
         
         [self.contentView addSubview:_senderThumbnail];
         [self.contentView addSubview:_taskName];
         [self.contentView addSubview:_reminderTime];
         
-        
     }
     return self;
 }
 
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
+    // Pass 1.0 to force exact pixel size.
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 
 - (void)prepareForReuse
