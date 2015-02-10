@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		992F23881985BD6300320CAA /* RKSwipeBetweenViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKSwipeBetweenViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		992F23881985BD6300320CAA /* AskMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		992F238B1985BD6300320CAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		992F238D1985BD6300320CAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		992F238F1985BD6300320CAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -116,7 +116,7 @@
 		992F23891985BD6300320CAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				992F23881985BD6300320CAA /* RKSwipeBetweenViewControllers.app */,
+				992F23881985BD6300320CAA /* AskMe.app */,
 				992F23A91985BD6300320CAA /* RKSwipeBetweenViewControllersTests.xctest */,
 			);
 			name = Products;
@@ -202,7 +202,7 @@
 			);
 			name = RKSwipeBetweenViewControllers;
 			productName = RKSwipeBetweenViewControllers;
-			productReference = 992F23881985BD6300320CAA /* RKSwipeBetweenViewControllers.app */;
+			productReference = 992F23881985BD6300320CAA /* AskMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 		992F23A81985BD6300320CAA /* RKSwipeBetweenViewControllersTests */ = {
@@ -426,7 +426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/AskMe-Prefix.pch";
 				INFOPLIST_FILE = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Info.plist";
-				PRODUCT_NAME = RKSwipeBetweenViewControllers;
+				PRODUCT_NAME = AskMe;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,7 +442,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/AskMe-Prefix.pch";
 				INFOPLIST_FILE = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Info.plist";
-				PRODUCT_NAME = RKSwipeBetweenViewControllers;
+				PRODUCT_NAME = AskMe;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
