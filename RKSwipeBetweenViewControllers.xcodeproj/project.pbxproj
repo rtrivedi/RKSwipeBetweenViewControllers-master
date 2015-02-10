@@ -50,7 +50,7 @@
 		992F23931985BD6300320CAA /* RKSwipeBetweenViewControllers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RKSwipeBetweenViewControllers-Info.plist"; sourceTree = "<group>"; };
 		992F23951985BD6300320CAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		992F23971985BD6300320CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		992F23991985BD6300320CAA /* RKSwipeBetweenViewControllers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RKSwipeBetweenViewControllers-Prefix.pch"; sourceTree = "<group>"; };
+		992F23991985BD6300320CAA /* AskMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AskMe-Prefix.pch"; sourceTree = "<group>"; };
 		992F239A1985BD6300320CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		992F239B1985BD6300320CAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		992F239E1985BD6300320CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				992F23931985BD6300320CAA /* RKSwipeBetweenViewControllers-Info.plist */,
 				992F23941985BD6300320CAA /* InfoPlist.strings */,
 				992F23971985BD6300320CAA /* main.m */,
-				992F23991985BD6300320CAA /* RKSwipeBetweenViewControllers-Prefix.pch */,
+				992F23991985BD6300320CAA /* AskMe-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -424,9 +424,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Prefix.pch";
+				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/AskMe-Prefix.pch";
 				INFOPLIST_FILE = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RKSwipeBetweenViewControllers;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,9 +440,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Prefix.pch";
+				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/AskMe-Prefix.pch";
 				INFOPLIST_FILE = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RKSwipeBetweenViewControllers;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -464,7 +464,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "RKSwipeBetweenViewControllersTests/RKSwipeBetweenViewControllersTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RKSwipeBetweenViewControllersTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -482,7 +482,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RKSwipeBetweenViewControllers/RKSwipeBetweenViewControllers-Prefix.pch";
 				INFOPLIST_FILE = "RKSwipeBetweenViewControllersTests/RKSwipeBetweenViewControllersTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RKSwipeBetweenViewControllersTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

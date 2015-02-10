@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8CDE39A4-100E-47A8-AD0E-590D5CFA743F</string>
+	<string>932348D3-F50E-4D2D-9B60-1AEBEA00AD21</string>
 	<key>IDESourceControlProjectName</key>
-	<string>RKSwipeBetweenViewControllers</string>
+	<string>AskMe</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2CF78F1B0A1366E2A11AFF415BEC034573706548</key>
 		<string>https://github.com/rtrivedi/RKSwipeBetweenViewControllers-master.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RKSwipeBetweenViewControllers.xcodeproj</string>
+	<string>AskMe.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2CF78F1B0A1366E2A11AFF415BEC034573706548</key>
