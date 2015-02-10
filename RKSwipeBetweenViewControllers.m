@@ -31,7 +31,6 @@
 @synthesize buttonText;
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

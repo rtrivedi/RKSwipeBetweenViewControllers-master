@@ -42,14 +42,18 @@
         _reminderTime = [[UILabel alloc] initWithFrame:CGRectMake(Middle.frame.origin.x,_taskName.frame.origin.y + _taskName.frame.size.height, Middle.frame.size.width, 20)];
         _reminderTime.textColor = [[UIColor alloc] initWithRed:136/255.0f green:136/255.0f blue:136/255.0f alpha:1.0f];
         _reminderTime.font = reminderFont;
-        _reminderTime.text = @"Reminder at 11:30am";
         
-        UIImage *img = [self imageWithImage:[UIImage imageNamed:@"checkmark.png"] scaledToSize:CGSizeMake(30, 30)];
+        UIImage *img = [self imageWithImage:[UIImage imageNamed:@"checkmark.png"] scaledToSize:CGSizeMake(50, 50)];
+        _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _doneButton.frame = CGRectMake(Middle.frame.origin.x + Middle.frame.size.width, _senderThumbnail.frame.origin.y, 50, 50);
+        _doneButton.center = CGPointMake(_doneButton.center.x, _senderThumbnail.center.y);
+        
+        [_doneButton setImage:img forState:UIControlStateNormal];
 
-        
         [self.contentView addSubview:_senderThumbnail];
         [self.contentView addSubview:_taskName];
         [self.contentView addSubview:_reminderTime];
+        [self.contentView addSubview:_doneButton];
         
     }
     return self;

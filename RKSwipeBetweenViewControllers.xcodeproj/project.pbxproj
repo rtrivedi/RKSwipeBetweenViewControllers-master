@@ -233,7 +233,7 @@
 				ORGANIZATIONNAME = "Richard Kim";
 				TargetAttributes = {
 					992F23871985BD6300320CAA = {
-						DevelopmentTeam = CBME5RD7L2;
+						DevelopmentTeam = AP499P23Y4;
 					};
 					992F23A81985BD6300320CAA = {
 						TestTargetID = 992F23871985BD6300320CAA;

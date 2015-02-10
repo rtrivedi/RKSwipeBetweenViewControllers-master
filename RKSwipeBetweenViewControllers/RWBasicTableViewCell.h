@@ -13,6 +13,8 @@
 @property (retain, nonatomic) UIImageView *senderThumbnail;
 @property (retain, nonatomic) UILabel *taskName;
 @property (retain, nonatomic) UILabel *reminderTime;
+@property (retain, nonatomic) UIButton *doneButton;
+
 
 
 @end

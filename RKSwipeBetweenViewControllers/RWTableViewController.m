@@ -18,7 +18,6 @@
 
 @implementation RWTableViewController{
     NSArray *tableData;
-
 }
 
 @synthesize _objects;
@@ -26,10 +25,9 @@
 #pragma mark - Custom accessors
 
 - (NSMutableArray *)objects {
+    
   if (!_objects) {
-      
       _objects = [NSMutableArray arrayWithObjects:@"One",@"Two",@"Three",nil];
-
   }
   return _objects;
 }
@@ -45,8 +43,7 @@
 
     _objects = [NSMutableArray arrayWithObjects:@"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc",@"Check out the report and finalize it, please", nil];
     [self.tableView registerClass: [RWBasicTableViewCell class] forCellReuseIdentifier:@"Cell Identifier"];
-    //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
   UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognized:)];
   [self.tableView addGestureRecognizer:longPress];
@@ -70,6 +67,7 @@
 {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 40)];
+    view.backgroundColor = [UIColor whiteColor];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(19, view.frame.origin.y, view.frame.size.width-19, view.frame.size.height)];
     label.textColor = [[UIColor alloc] initWithRed:76/255.0f green:76/255.0f blue:76/255.0f alpha:1.0f];
     [label setFont:[UIFont fontWithName:@"BrandonText-Regular" size:12]];
@@ -93,11 +91,10 @@
         case 1:
             sectionName = NSLocalizedString(@"Afternoon", @"Afternoon");
             break;
-        
         case 2:
             sectionName = NSLocalizedString(@"Evening", @"Evening");
             break;
-            
+
         default:
             sectionName = @"Anytime";
             break;
@@ -116,11 +113,12 @@
         cell = [tableView dequeueReusableCellWithIdentifier:kIdentifier forIndexPath:indexPath];
     }
     
+    cell.selectedBackgroundView = [[UIView alloc] init];
+    cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
   
   // Update cell content from data source.
   NSString *object = [_objects objectAtIndex:indexPath.row];
     NSLog(@"selected tableview row is %ld",(long)indexPath.row);
-    NSLog(object);
     cell.taskName.text = object;
     [cell.taskName sizeToFit];
   
@@ -219,8 +217,10 @@
       center.y = location.y;
       snapshot.center = center;
       
-      // Is destination valid and is it different from source?
-      if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
+        // Is destination valid and is it different from source?
+        //added that the indexPath section has to be the same as the source index path. Can't reorder between sections.
+        
+      if (indexPath && ![indexPath isEqual:sourceIndexPath] && (indexPath.section == sourceIndexPath.section)) {
         
         // ... update data source.
         [self.objects exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
@@ -259,6 +259,23 @@
     }
   }
 }
+
+//- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+//    // Add your Colour.
+//    RWBasicTableViewCell *cell = (RWBasicTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+//    [self setCellColor:[UIColor whiteColor] ForCell:cell];  //highlight colour
+//}
+//
+//- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+//    // Reset Colour.
+//    RWBasicTableViewCell *cell = (RWBasicTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+//    [self setCellColor:[UIColor colorWithWhite:0.961 alpha:1.000] ForCell:cell]; //normal color
+//}
+//
+//- (void)setCellColor:(UIColor *)color ForCell:(UITableViewCell *)cell {
+//    cell.contentView.backgroundColor = color;
+//    cell.backgroundColor = color;
+//}
 
 #pragma mark - Helper methods
 
